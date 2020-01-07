@@ -10,7 +10,7 @@ jobs:
     - uses: avsm/setup-ocaml@master
       with:
         ocaml-version: '4.09.0'
-    - run: opam install coq=8.10.1
+    - run: opam install coq=8.10.1; coqc --version
     - run: opam install menhir=20190626
     - run: opam repo add coq-released https://coq.inria.fr/opam/released
     - run: opam install coq-paco
