@@ -17,5 +17,7 @@ jobs:
     - run: eval $(opam env)
     - run: opam list
     - run: opam switch
+    - run: coqc --version
+    - run: ocamlc --version
     - run: ./configure x86_64-linux
     - run: make -j
