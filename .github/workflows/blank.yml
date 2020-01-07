@@ -16,5 +16,7 @@ jobs:
     - run: opam repo add coq-released https://coq.inria.fr/opam/released
     - run: opam install coq-paco
     - run: eval `opam env`
+    - run: opam list
+    - run: opam switch
     - run: ./configure x86_64-linux
     - run: make -j
