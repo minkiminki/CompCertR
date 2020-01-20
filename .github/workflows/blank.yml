@@ -7,10 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: avsm/setup-ocaml@master
-      with:
-        ocaml-version: '4.09.0'
-    - run: opam install coq=8.10.1; coqc --version
+    - uses: docker://coqorg/coq:8.10.2
     - run: opam install menhir=20190626
     - run: opam repo add coq-released https://coq.inria.fr/opam/released
     - run: opam install coq-paco
